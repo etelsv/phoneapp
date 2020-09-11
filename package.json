@@ -1,3 +1,4 @@
+
 {
   "name": "8-bit-revolution-tut",
   "version": "1.0.0",
@@ -6,9 +7,12 @@
   "scripts": {
     "build": "echo \"Building your new static site!\""
   },
-  
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/etelsv/phoneapp.git"
+  },
   "keywords": [],
-  "author": "etel sverdlov <etel@hey.com",
+  "author": "stefan judis <sjudis@twilio.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/stefanjudis/8-bit-revolution-tut/issues"
