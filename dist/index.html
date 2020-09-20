@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>8-bit revolution</title>
+  <title>Read German Poetry Easier</title>
   <!-- reference the new stylesheet -->
   <link rel="stylesheet" href="/styles.css" />
   <!-- load Google Font to get get a nice 8-bit font -->
@@ -14,42 +14,21 @@
   <meta name="theme-color" content="#fafafa">
 </head>
 <body>
-  <form name="contact" class="form" method="POST" data-netlify="true">
-    <h1>Wanna spread the word?</h1>
-    <button class="btn" type="submit">Send messages!</button>
-</form>
-<p class="successMsg" role="alert" hidden>Messages sent...</p>
-<p class="errorMsg" role="alert" hidden>Something went wrong...</p>
+  <P>Herbsttag
+    Herr, es ist Zeit. Der Sommer war sehr groß.
+    Leg deinen Schatten auf die Sonnenuhren,
+    und auf den Fluren lass die Winde los.
+    
+    Befiehl den letzten Früchten, voll zu sein;
+    gib ihnen noch zwei südlichere Tage,
+    dränge sie zur Vollendung hin, und jage
+    die letzte Süße in den schweren Wein.
+    
+    Wer jetzt kein Haus hat, baut sich keines mehr.
+    Wer jetzt allein ist, wird es lange bleiben,
+    wird wachen, lesen, lange Briefe schreiben
+    und wird in den Alleen hin und her
+    unruhig wandern, wenn die Blätter treiben.</P>
+
 </body>
 </html>
-
-<script>
-  const form = document.querySelector('form');
-  form.addEventListener('submit', async event => {
-    event.preventDefault();
-    
-    // disable button to prevent multiple submissions
-    form.querySelector('button').disabled = true;
-
-    // make the request to submit the form
-    try {
-      const response = await fetch('/', {
-        method: 'post',
-        headers: {
-          'Content-type': 'application/x-www-form-urlencoded; charset=UTF-8'
-        },
-        // parse and submit all included form data
-        body: new URLSearchParams(new FormData(form)).toString()
-      });
-
-      // if it was successful show success message
-      if (response.status === 200) {
-        document.querySelector('.successMsg').hidden = false;
-      } else {
-        document.querySelector('.errorMsg').hidden = false;
-      }
-    } catch (e) {
-      console.error(e);
-    }
-  });
-</script>

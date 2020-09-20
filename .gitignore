@@ -1,1 +1,2 @@
 "build": "netlify-lambda build functions"
+.env
